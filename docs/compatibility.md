@@ -21,6 +21,10 @@ npm run extension -- ../booking --server rust --npm-scope @my-business
 
 Use a new directory for each project. `--force` overlays known starter files in an existing directory, so inspect the target before using it. Generated projects are independent of this repository after creation.
 
+## Your project's license
+
+The starter code, templates, and guides use [MIT-0](../LICENSE.md). You can build and distribute your own projects without attribution or keeping a copy of the starter's license. Choose your own project's licensing terms; the generator leaves those declarations to you. Dependencies and separately distributed runtime artifacts retain their own licenses and notices.
+
 ## Versioned authoring kits
 
 Theme and extension projects include their immutable 0.1.98 kit under `authoring/`. Archive, manifest, and file checksums are verified before extraction. Both kits identify source commit `66ae9f689dd09357e0b8e5ff211f885017a4cfa4`.

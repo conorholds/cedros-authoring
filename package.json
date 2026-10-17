@@ -2,7 +2,7 @@
   "name": "@cedros/authoring",
   "version": "0.1.0",
   "description": "Build custom pages, themes, and extensions for your Cedros website",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "MIT-0",
   "homepage": "https://github.com/conorholds/cedros-authoring#readme",
   "bugs": {
     "url": "https://github.com/conorholds/cedros-authoring/issues"

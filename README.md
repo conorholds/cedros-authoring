@@ -67,4 +67,6 @@ Your work goes in the generated project. You can return to this kit whenever you
 
 ## License
 
-This repository is source-available under [PILL-1.0.0](LICENSE.md), the Personal and Internal Limited License. Personal and internal business use are permitted; see the license for redistribution and service restrictions.
+The starter code, templates, and guides are licensed under [MIT-0 (MIT No Attribution)](LICENSE.md). Use, modify, sell, and distribute them as part of your own projects, with no attribution or license-notice requirement. You choose the license for the work you create.
+
+Separate dependencies retain their own licenses. The private Cedros theme runtime keeps its [separate distribution terms](docs/compatibility.md#theme-runtime).

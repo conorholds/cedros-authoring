@@ -35,7 +35,6 @@ name = ${tomlString(model.serverPackageName)}
 version = ${tomlString(model.version)}
 edition = "2021"
 description = ${tomlString(`Cedros extension server package for ${model.displayName}`)}
-license = "MIT OR Apache-2.0"
 
 [lib]
 name = ${tomlString(model.serverLibName)}
