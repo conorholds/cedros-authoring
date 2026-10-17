@@ -60,7 +60,11 @@ Open that project's README to see what to edit, how to check your changes, and h
 | Path | What's inside |
 | --- | --- |
 | `docs/` | Guides for building and installing your customization |
-| `tooling/` | The project generator, starter files, and versioned Cedros contracts |
+| `tooling/templates/pages/` | Custom page starter files |
+| `tooling/templates/themes/` | Custom theme starter files |
+| `tooling/templates/extensions/` | Custom extension starter files |
+| `tooling/assets/authoring/` | Shared, versioned Cedros authoring kits |
+| `tooling/src/` | The project generator |
 | `package.json` | The short commands shown above |
 
 Your work goes in the generated project. You can return to this kit whenever you want to start another.

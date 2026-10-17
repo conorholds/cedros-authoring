@@ -8,7 +8,7 @@ import { rootFiles } from "./templates-root.mjs";
 import { scriptFiles } from "./templates-scripts.mjs";
 
 const MODULE_DIR = dirname(fileURLToPath(import.meta.url));
-const WIT_PATH = resolve(MODULE_DIR, "../templates/wit/cedros-extension.wit");
+const WIT_PATH = resolve(MODULE_DIR, "../templates/extensions/server/wit/cedros-extension.wit");
 
 export async function buildExtensionFiles(model) {
   const wit = await readFile(WIT_PATH, "utf8");

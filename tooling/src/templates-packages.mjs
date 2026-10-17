@@ -6,7 +6,7 @@ export function packageFiles(model) {
     textFile("packages/server/Cargo.toml", serverCargoToml(model)),
     textFile("packages/server/src/lib.rs", serverLibRs(model)),
     ...(model.server === "rust" ? [
-      textFile("packages/server/Cargo.lock", readFileSync(new URL("../templates/authoring/server-Cargo.lock", import.meta.url), "utf8").replaceAll("__CEDROS_SERVER_PACKAGE__", model.serverPackageName).replaceAll("__CEDROS_EXTENSION_VERSION__", model.version)),
+      textFile("packages/server/Cargo.lock", readFileSync(new URL("../templates/extensions/server/Cargo.lock", import.meta.url), "utf8").replaceAll("__CEDROS_SERVER_PACKAGE__", model.serverPackageName).replaceAll("__CEDROS_EXTENSION_VERSION__", model.version)),
       textFile("packages/server/wit/route-only.wit", 'package cedros:extension@0.1.0;\n\nworld route-only {\n    import logging;\n    export routes;\n    export jobs;\n}\n'),
     ] : []),
     textFile("packages/react/package.json", reactPackageJson(model)),
@@ -46,7 +46,7 @@ ${model.server === "rust" ? 'wit-bindgen = "=0.57.0"\n' : ""}`;
 }
 
 function serverLibRs(model) {
-  if (model.server === "rust") return readFileSync(new URL("../templates/authoring/server-component.rs", import.meta.url), "utf8");
+  if (model.server === "rust") return readFileSync(new URL("../templates/extensions/server/component.rs", import.meta.url), "utf8");
   return `const MANIFEST_JSON: &str = include_str!("../../../cedros-extension.manifest.json");
 
 pub fn register_extension_family() -> serde_json::Value {
@@ -202,7 +202,7 @@ export default registerCedrosNativeSurface;
 }
 
 function runtimeTypes(member) {
-  return readFileSync(new URL(`../templates/authoring/${member}-cedros-admin-runtime.d.ts`, import.meta.url), "utf8");
+  return readFileSync(new URL(`../templates/extensions/${member}/cedros-admin-runtime.d.ts`, import.meta.url), "utf8");
 }
 
 function tsconfig() {

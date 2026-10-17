@@ -39,7 +39,7 @@ export function scaffoldThemeProject(input) {
 
   const templateRoot = resolve(
     dirname(fileURLToPath(import.meta.url)),
-    "../templates/theme-routine-safe"
+    "../templates/themes"
   );
   const replacements = buildReplacements({ themeId, displayName, version });
 

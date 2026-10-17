@@ -24,7 +24,7 @@ export function scaffoldPageProject(input) {
   }
   assertWritableTarget(targetDir, Boolean(input.force));
 
-  const templateRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../templates/page-production");
+  const templateRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../templates/pages");
   const replacements = new Map([
     ["__CEDROS_PAGE_ID__", pageId],
     ["__CEDROS_PAGE_COMPONENT__", componentName(pageId)],

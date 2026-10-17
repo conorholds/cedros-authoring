@@ -13,7 +13,7 @@ export function rootFiles(model) {
     textFile("cedros-extension.manifest.json", json(manifest)),
     textFile("extension-context.json", json(extensionContext())),
     textFile("package.json", packageJson(model)),
-    textFile("package-lock.json", readFileSync(new URL("../templates/authoring/extension-package-lock.json", import.meta.url), "utf8")
+    textFile("package-lock.json", readFileSync(new URL("../templates/extensions/package-lock.json", import.meta.url), "utf8")
       .replaceAll("__CEDROS_EXTENSION_ID__", model.extensionId)
       .replaceAll("__CEDROS_REACT_PACKAGE__", model.reactPackageName)
       .replaceAll("__CEDROS_NATIVE_PACKAGE__", model.nativePackageName)

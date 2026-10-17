@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 export function scriptFiles(model) {
   return [
     textFile("scripts/package-extension.js", packageExtensionScript()),
-    ...(model.server === "rust" ? [textFile("scripts/build-server.mjs", readFileSync(new URL("../templates/authoring/build-server.mjs", import.meta.url), "utf8"))] : []),
+    ...(model.server === "rust" ? [textFile("scripts/build-server.mjs", readFileSync(new URL("../templates/extensions/scripts/build-server.mjs", import.meta.url), "utf8"))] : []),
     textFile("scripts/sync-generated-manifest.js", syncGeneratedManifestScript()),
     textFile("scripts/validate-extension.js", validateExtensionScript()),
   ];
