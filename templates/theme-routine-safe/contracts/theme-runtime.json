@@ -1,0 +1,45 @@
+{
+  "kind": "cedros-theme-authoring-runtime",
+  "version": "0.1.0",
+  "hostVersion": "0.1.98",
+  "themeSchemaVersion": 1,
+  "documentationBaseline": "0.1.98",
+  "optionalPeers": {
+    "@cedros/trade-react": "^0.1.0",
+    "@gsap/react": "2.1.2",
+    "@react-spring/web": "10.1.2",
+    "@react-three/drei": "10.7.7",
+    "@react-three/fiber": "9.6.1",
+    "@solana/web3.js": "1.98.4",
+    "@use-gesture/react": "10.3.1",
+    "animejs": "4.5.0",
+    "framer-motion": "12.43.0",
+    "gsap": "3.15.0",
+    "lenis": "1.3.25",
+    "lottie-react": "2.4.1",
+    "motion": "12.43.0",
+    "qrcode": "1.5.4",
+    "sucrase": "3.35.1",
+    "three": "0.185.1"
+  },
+  "sourceTreeSha256": "89e53ea4aeffef555d5f64d18ff550e3f6f3ad990b06c3566de5b8a4000f6e13",
+  "packageName": "@cedros/theme-runtime",
+  "fileName": "cedros-theme-runtime-0.1.0.tgz",
+  "sha256": "444054b02a3601a67d11abae15c15e20705d18a3cc8affbf04a1d1d2009511c6",
+  "integrity": "sha512-2euuM2JX3jIwc/7Yq3xiQDQawVf6tyyF6D+W13pcDvL7faPYbRUozWil+0IUclyD8nJDCyXeRr0/3+t53jcjrQ==",
+  "canonicalBase": "https://cedros.ai/authoring/theme-runtime/0.1.0/",
+  "exports": {
+    ".": {
+      "types": "./dist/types/ui/theme-authoring-runtime/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./preview": {
+      "types": "./dist/types/ui/theme-authoring-runtime/preview.d.ts",
+      "node": "./dist/preview.node.js",
+      "import": "./dist/preview.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./RUNTIME.json": "./RUNTIME.json"
+  },
+  "redistribution": "private; see LICENSE.txt"
+}

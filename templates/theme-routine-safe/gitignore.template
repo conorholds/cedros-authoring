@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.theme-review/
+.theme-runtime/
+*.log
+
+archive/cedros-authoring/

@@ -1,0 +1,12 @@
+{
+  "route": __CEDROS_PAGE_ROUTE_JSON__,
+  "title": __CEDROS_PAGE_TITLE_JSON__,
+  "label": __CEDROS_PAGE_LABEL_JSON__,
+  "seo": {
+    "indexability": __CEDROS_PAGE_INDEXABILITY_JSON__,
+    "descriptionSource": "markdown-lede",
+    "schemaType": "WebPage",
+    "breadcrumbs": true,
+    "minWords": 100
+  }
+}

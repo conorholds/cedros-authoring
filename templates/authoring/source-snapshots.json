@@ -1,0 +1,21 @@
+{
+  "version": "0.1.98",
+  "sourceCommit": "66ae9f689dd09357e0b8e5ff211f885017a4cfa4",
+  "platformApiVersion": "1",
+  "kits": {
+    "extension": {
+      "url": "https://cedros.ai/authoring/0.1.98/extension/kit.zip",
+      "archive": "extension-0.1.98.zip",
+      "sha256": "be4b7b2e92c1cf301bd79b34b63148f67b2c6bd39b254e43ffb4f91bff42223a",
+      "manifestSha256": "1fc272ddbaaf9822a599a559d0745f526a22406e615fbe6e8563763fa8247fd2",
+      "contentSetSha256": "f5695abd234ff40c27e34e1c32d86e8d1b8506622c50d2fc5e1da04c02a92030"
+    },
+    "theme": {
+      "url": "https://cedros.ai/authoring/0.1.98/theme/kit.zip",
+      "archive": "theme-0.1.98.zip",
+      "sha256": "5a10ad76027e9572dc1cdf02a44902d91c77d704125a9c4b651053843488d9f4",
+      "manifestSha256": "d79208ef31468760a9200c19926956116a76ccae8272bb0f460c14b63a5274b1",
+      "contentSetSha256": "4078ae9af689e95f18b03688f080ea1f86b0e9767b79fee3631c57cb4ca01231"
+    }
+  }
+}

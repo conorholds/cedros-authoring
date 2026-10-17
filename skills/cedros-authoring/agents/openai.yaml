@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cedros Authoring"
+  short_description: "Scaffold and guide Cedros authoring projects"
+  default_prompt: "Use $cedros-authoring to choose and scaffold the right Cedros page, theme, or extension."
