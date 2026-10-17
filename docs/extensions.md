@@ -6,17 +6,15 @@ Extensions can provide admin tools, website components, native components, and s
 
 ## Create your project
 
-From the Cedros Authoring repository:
+From the Cedros Authoring repository, choose one starting point.
+
+For an admin or website feature, create the default project with its working admin module:
 
 ```sh
 npm run extension -- ../my-extension
-cd ../my-extension
-make install
 ```
 
-The default project includes a working admin module. It needs Node.js, npm, `make`, and `unzip`.
-
-If your feature needs server routes or scheduled work, use this creation command instead, from the Cedros Authoring repository:
+For a feature that needs server routes or scheduled work, create the Rust backend project:
 
 ```sh
 npm run extension -- ../my-extension --server rust
@@ -27,6 +25,15 @@ That option includes a working status route and its tests. Install Rust stable a
 ```sh
 rustup target add wasm32-wasip2
 ```
+
+After creating either project, enter its directory and install its dependencies:
+
+```sh
+cd ../my-extension
+make install
+```
+
+Both starting points use Node.js, npm, `make`, and `unzip`.
 
 ## Make it yours
 

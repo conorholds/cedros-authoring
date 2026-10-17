@@ -54,6 +54,9 @@ Open that project's README to see what to edit, how to check your changes, and h
 - [Build a custom extension](docs/extensions.md): add features and package them for installation.
 - [Work with an AI assistant](docs/ai.md): give your assistant a clear brief and the right Cedros documentation.
 - [Compatibility and advanced options](docs/compatibility.md): supported versions, build tools, and package contracts.
+- [Troubleshooting](docs/troubleshooting.md): setup, downloads, previews, and package errors.
+
+Browse the [guide index](docs/README.md) for the full workflow, or the [project tools guide](tooling/README.md) to understand the repository's implementation folders.
 
 ## Repository layout
 
