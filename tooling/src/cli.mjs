@@ -4,7 +4,12 @@ import { printReference } from "./references.mjs";
 import { scaffoldThemeProject } from "./theme-scaffold.mjs";
 import { packageVersion } from "./version.mjs";
 
-const HELP = `Cedros authoring scaffold CLI
+const HELP = `Create a custom Cedros page, theme, or extension.
+
+From a starter-kit checkout:
+  npm run page -- ../my-page
+  npm run theme -- ../my-theme
+  npm run extension -- ../my-extension
 
 Usage:
   cedros-authoring init theme <target-dir> [options]
@@ -67,7 +72,8 @@ export async function runCli(argv) {
     console.log(`Theme: ${result.themeId} (${result.displayName})`);
     console.log("");
     console.log("Next:");
-    console.log("  make install THEME_RUNTIME_TARBALL=/path/to/cedros-theme-runtime-0.1.0.tgz");
+    console.log(`  cd ${shellQuote(result.targetDir)}`);
+    console.log("  make install");
     console.log("  make validate");
     console.log("  make build");
     console.log("  make package");
@@ -79,6 +85,7 @@ export async function runCli(argv) {
     console.log(`Extension: ${result.extensionId}@${result.version}`);
     console.log("");
     console.log("Next:");
+    console.log(`  cd ${shellQuote(result.targetDir)}`);
     console.log("  make install");
     console.log("  make validate");
     console.log("  make package");
@@ -90,12 +97,18 @@ export async function runCli(argv) {
     console.log(`Page: ${result.route} (${result.label})`);
     console.log("");
     console.log("Next:");
+    console.log(`  cd ${shellQuote(result.targetDir)}`);
+    console.log("  make install");
     console.log("  make validate");
     console.log("  make package");
     console.log("  make test");
     return;
   }
   throw new Error(`unsupported init target "${kind}"`);
+}
+
+function shellQuote(value) {
+  return `'${value.replaceAll("'", "'\\''")}'`;
 }
 
 function parseOptions(args, kind) {

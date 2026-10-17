@@ -7,7 +7,7 @@ description: Use the public Cedros Authoring starter kit to choose, scaffold, va
 
 Use this skill with the public Cedros Authoring starter kit and its generated projects. Keep the user's existing project and unrelated files intact.
 
-From a clone of this kit, run `node ./bin/cedros-authoring.mjs --help`; no root dependency installation is required to scaffold. Use `node ./bin/cedros-authoring.mjs reference <topic>` for the references below. If the CLI is installed in the user's project, use `npm exec -- cedros-authoring` instead.
+From a clone of this kit, run `npm run help`; no root dependency installation is required to create a project. Use `npm run page -- <target>`, `npm run theme -- <target>`, or `npm run extension -- <target>`. If the CLI is installed in the user's project, use `npm exec -- cedros-authoring init <kind> <target>` instead. Read the relevant reference below for the exact contracts.
 
 Choose the smallest surface that owns the requested behavior, then use the bundled CLI to create a workspace in a new directory. Use `--force` only when the user intends to overlay an inspected existing project.
 
@@ -24,7 +24,7 @@ The supported authoring baseline is Cedros 0.1.98, platform API 1. Generated ext
 
 1. Read every applicable repository instruction file and preserve existing work.
 2. If a target Cedros site is known, follow [references/discovery.md](references/discovery.md) before assuming live capabilities or schemas.
-3. Run `node ./bin/cedros-authoring.mjs init <page|theme|extension> <target>` from the kit clone with the narrowest options required. Extensions default to UI-only; use `--server rust` only when the project needs the executable Rust/Wasm backend.
+3. Create the chosen project with the short commands above and the narrowest options required. Extensions default to UI-only; use `--server rust` only when the project needs the executable Rust/Wasm backend.
 4. Read the generated `AGENTS.md` and canonical source files before editing.
 5. Keep authoring declarations aligned across every generated surface; do not invent fields, permissions, routes, SDK helpers, or host behavior.
 6. Run `make install` once, then use the generated `make validate`, `make package`, and `make test` loop. For extensions, resolve the task mode through `node scripts/cedros-authoring.mjs resolve-path --repo . --mode <mode> --json` and maintain `extension-context.json`. For themes, `make install THEME_RUNTIME_TARBALL=/path/to/cedros-theme-runtime-0.1.0.tgz` verifies the authorized private artifact against the pinned manifest and lockfile; never redistribute it. Shared validation and `make build` docs/blog previews remain separate from installed-site acceptance through Appearance in both color modes.

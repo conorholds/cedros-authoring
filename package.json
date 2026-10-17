@@ -1,7 +1,7 @@
 {
   "name": "@cedros/authoring",
   "version": "0.1.0",
-  "description": "Cedros scaffolds and agent guidance for custom pages, themes, and extensions",
+  "description": "Build custom pages, themes, and extensions for your Cedros website",
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://github.com/conorholds/cedros-authoring#readme",
   "bugs": {
@@ -26,18 +26,19 @@
     "node": ">=24.17.0 <25"
   },
   "bin": {
-    "cedros-authoring": "bin/cedros-authoring.mjs"
+    "cedros-authoring": "tooling/bin/cedros-authoring.mjs"
   },
   "files": [
-    "bin",
-    "skills",
-    "src",
-    "templates",
+    "docs",
+    "tooling",
     "README.md",
     "LICENSE.md"
   ],
   "scripts": {
-    "smoke": "node ./bin/cedros-authoring.mjs --help"
+    "help": "node ./tooling/bin/cedros-authoring.mjs --help",
+    "page": "node ./tooling/bin/cedros-authoring.mjs init page",
+    "theme": "node ./tooling/bin/cedros-authoring.mjs init theme",
+    "extension": "node ./tooling/bin/cedros-authoring.mjs init extension"
   },
   "publishConfig": {
     "access": "public"

@@ -97,7 +97,16 @@ help:
 function readme(model) {
   return `# ${model.displayName}
 
-Cedros extension scaffold for \`${model.extensionId}\`.
+Custom functionality for your Cedros website.
+
+This project starts with a working admin module${model.server === "rust" ? " and a Rust/Wasm status route" : ""}. Build your feature in the packages below, check it locally, and upload the packaged ZIP through your site's Extensions settings.
+
+| Path | What to edit |
+| --- | --- |
+| \`cedros-extension.manifest.json\` | Extension identity, version, and capabilities |
+| \`packages/react/src/\` | Admin and website registration and UI |
+| \`packages/react-native/src/\` | Native registration |
+| \`packages/server/src/\` | ${model.server === "rust" ? "Server routes and jobs" : "Server family registration metadata"} |
 
 Requires Node.js 24.17.x, npm 11.13.0, and \`make\`. ${model.server === "rust" ? "The Rust backend also requires Rust stable with the wasm32-wasip2 target; run rustup target add wasm32-wasip2 before building." : "The default UI-only build requires no Rust toolchain. Rust is needed only if you explicitly check the server family registration crate."}
 The canonical verifier also requires \`unzip\`.
@@ -106,10 +115,8 @@ The canonical verifier also requires \`unzip\`.
 
 \`\`\`bash
 make install
-make build
-make validate
-make package
 make test
+make package
 \`\`\`
 
 The validation, package, and test targets build the React and React Native
@@ -118,12 +125,7 @@ runtime exports. ${model.server === "rust" ? "They also build the locked Rust Wa
 \`make package\` writes \`dist/${model.extensionId}-${model.version}.cedros-extension.zip\`.
 Upload that archive through Cedros admin Extensions.
 
-## Shape
-
-- \`cedros-extension.manifest.json\` is the canonical manifest.
-- \`packages/server\` owns server family registration and the pinned WIT.
-- \`packages/react\` owns admin and public web registration exports.
-- \`packages/react-native\` owns the native bootstrap export.
+## Server behavior
 
 ${model.server === "rust" ? `The Rust backend exports GET /extensions/${model.extensionId}/status, returning the manifest identity and version. It uses a route-only guest world with no privileged host imports, rejects unknown routes/methods/paths, declares no jobs, and packages the compiled component as cedros-extension.server.wasm. Run npm run test:server for the Rust route tests.` : "The default scaffold starts with one executable admin module and no server routes or jobs. Choose --server rust when creating a workspace to include the executable status-route Wasm backend."}
 
